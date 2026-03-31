@@ -1,0 +1,65 @@
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const links = [
+  { href: '/', label: 'home' },
+  { href: '/writing', label: 'writing' },
+  { href: '/shorts', label: 'shorts' },
+  { href: '/about', label: 'about' },
+  { href: '/contact', label: 'contact' },
+]
+
+export default function Nav() {
+  const pathname = usePathname()
+
+  return (
+    <nav style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      height: 'var(--nav-h)',
+      background: 'var(--white)',
+      borderBottom: '1px solid var(--gray-light)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: '0 40px',
+      zIndex: 100,
+    }}>
+      <Link href="/" style={{
+        fontFamily: 'var(--serif)',
+        fontSize: '18px',
+        letterSpacing: '-0.01em',
+        color: 'var(--black)',
+      }}>
+        Krish Chopra
+      </Link>
+
+      <ul style={{ display: 'flex', gap: '36px', listStyle: 'none' }}>
+        {links.map(({ href, label }) => {
+          const active = pathname === href
+          return (
+            <li key={href}>
+              <Link
+                href={href}
+                style={{
+                  fontFamily: 'var(--mono)',
+                  fontSize: '12px',
+                  fontWeight: 300,
+                  letterSpacing: '0.08em',
+                  color: active ? 'var(--black)' : 'var(--gray-muted)',
+                  transition: 'color 0.15s',
+                }}
+              >
+                {label}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
+  )
+}
