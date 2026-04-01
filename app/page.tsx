@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Featured essays */}
-      <section style={{ padding: '80px 40px', maxWidth: 'var(--max)', margin: '0 auto' }}>
+      <section style={{ padding: '120px 40px', maxWidth: 'var(--max)', margin: '0 auto' }}>
         <div style={{
           display: 'flex',
           alignItems: 'baseline',
