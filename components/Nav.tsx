@@ -45,13 +45,16 @@ export default function Nav() {
             <li key={href}>
               <Link
                 href={href}
+                onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
+                onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
                 style={{
                   fontFamily: 'var(--mono)',
                   fontSize: '12px',
                   fontWeight: 300,
                   letterSpacing: '0.08em',
                   color: active ? 'var(--black)' : 'var(--gray-muted)',
-                  transition: 'color 0.15s',
+                  transition: 'color 0.15s, transform 0.15s',
+                display: 'inline-block',
                 }}
               >
                 {label}
