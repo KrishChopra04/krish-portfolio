@@ -44,8 +44,8 @@ export default function Home() {
               fontWeight: 400,
               maxWidth: '520px',
             }}>
-              There is no casual<br />relationship{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--gray-muted)' }}>with cinema.</em>
+              There is no casual<br />relationship with{' '}
+              <em style={{ fontStyle: 'italic', color: 'var(--gray-muted)' }}> cinema.</em>
             </h1>
 
             <p style={{
