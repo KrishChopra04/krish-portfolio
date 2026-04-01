@@ -64,8 +64,7 @@ export default function About() {
         </p>
 
         <p style={{ fontSize: '15px', lineHeight: 1.75, color: '#444', marginBottom: '0' }}>
-          My focus is spectatorship, the politics of form, and what it means to
-          take cinema seriously as a theoretical object.
+          My interests span film theory, criticism, and the history of form –– with a particular focus on spectatorship, apparatus theory, documentary ethics, and the ways cinema intersects with labor, race, and politics. Across the broad range of focus, the driving question remains the same: what does a film do, and why does it matter.
         </p>
 
         <div style={{ marginTop: '48px' }}>
