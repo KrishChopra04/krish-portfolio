@@ -80,6 +80,8 @@ export default function Writing() {
             href={essay.url}
             target="_blank"
             rel="noopener noreferrer"
+            onMouseEnter={e => (e.currentTarget.style.textDecoration = 'underline')}
+            onMouseLeave={e => (e.currentTarget.style.textDecoration = 'none')}
             style={{
               display: 'grid',
               gridTemplateColumns: '100px 1fr 140px',
