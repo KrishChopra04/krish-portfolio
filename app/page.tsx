@@ -1,3 +1,6 @@
+'use client'
+
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { essays, shorts } from '@/lib/data'
