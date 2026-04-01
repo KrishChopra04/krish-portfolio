@@ -33,7 +33,7 @@ export default function Home() {
               textTransform: 'uppercase',
               marginBottom: '48px',
             }}>
-              Film Critic &amp; Scholar &nbsp;/&nbsp; New York
+              Film Critic &amp; Scholar &nbsp;/&nbsp; New York &nbsp;/&nbsp; New Delhi
             </p>
 
             <h1 style={{
