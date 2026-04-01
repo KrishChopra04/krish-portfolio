@@ -44,8 +44,8 @@ export default function Home() {
               fontWeight: 400,
               maxWidth: '520px',
             }}>
-              Writing about<br />cinema,{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--gray-muted)' }}>seriously.</em>
+              There is no casual<br />relationaship,{' '}
+              <em style={{ fontStyle: 'italic', color: 'var(--gray-muted)' }}>with cinema.</em>
             </h1>
 
             <p style={{
