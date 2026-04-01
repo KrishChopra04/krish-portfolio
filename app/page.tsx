@@ -157,6 +157,8 @@ export default function Home() {
               href={essay.url}
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.015)')}
+              onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
               style={{
                 display: 'grid',
                 gridTemplateColumns: '80px 1fr 120px',
