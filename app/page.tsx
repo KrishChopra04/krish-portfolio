@@ -102,7 +102,7 @@ export default function Home() {
           minHeight: '500px',
         }}>
           <Image
-            src= "/hero.jpg"
+            src= "/hero.jpeg"
             alt="Krish Chopra"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'grayscale(20%)' }}
