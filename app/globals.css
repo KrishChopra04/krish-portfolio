@@ -39,3 +39,14 @@ a {
 input, textarea, button {
   font-family: inherit;
 }
+* {
+  font-family: var(--sans);
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+}
+
+code, pre, .mono {
+  font-family: var(--mono);
+}
