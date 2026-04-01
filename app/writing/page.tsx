@@ -38,7 +38,7 @@ export default function Writing() {
           lineHeight: 1.05,
           color: 'var(--black)',
         }}>
-          Essays &amp; Criticism
+          Essays &amp; Papers
         </h1>
       </div>
 
@@ -68,7 +68,16 @@ export default function Writing() {
           </button>
         ))}
       </div>
-
+      <p style={{
+        padding: '16px 40px',
+        fontFamily: 'var(--mono)',
+        fontSize: '10px',
+        letterSpacing: '0.06em',
+        color: 'var(--gray-muted)',
+        borderBottom: '1px solid var(--gray-light)',
+      }}>
+        All PDFs are reproduced copies formatted for this site and are not facsimilies of the original submissions.
+        </p>
       <div style={{
         maxWidth: 'var(--max)',
         margin: '0 auto',
