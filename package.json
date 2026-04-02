@@ -1,1 +1,21 @@
-{"name":"krish-portfolio","version":"1.0.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start"},"dependencies":{"next":"14","react":"^18","react-dom":"^18"},"devDependencies":{"@types/node":"25.5.0","@types/react":"19.2.14","typescript":"6.0.2"}}
+{
+  "name": "krish-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "next": "14",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "typescript": "6.0.2"
+  }
+}
