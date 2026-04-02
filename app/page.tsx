@@ -34,6 +34,18 @@ export default function Home() {
             }}>
               Film Critic &amp; Scholar &nbsp;/&nbsp; New York &nbsp;/&nbsp; New Delhi
             </p>
+            <p style={{
+              fontFamily: 'var(--mono)',
+              fontSize: '10px',
+              letterSpacing: '0.1em',
+              color: 'var(--grey-muted)',
+              marginBottom: '48px',
+              marginTop: '-40px',
+            }}>
+              New: <a href="/essays/dialogism.pdf" target="_blank" style={{ color: 'var(--black', textDecoration: 'underline', textUnderlineOffset: '3px', }}>
+                Sketch Comedy and the Deconstructive Work of Dialogism
+              </a>
+            </p>
 
             <h1 style={{
               fontFamily: 'var(--serif)',
