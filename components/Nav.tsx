@@ -50,7 +50,7 @@ export default function Nav() {
                 style={{
                   fontFamily: 'var(--mono)',
                   fontSize: '12px',
-                  fontWeight: 300,
+                  fontWeight: 450,
                   letterSpacing: '0.08em',
                   color: active ? 'var(--black)' : 'var(--gray-muted)',
                   transition: 'color 0.15s, transform 0.15s',
