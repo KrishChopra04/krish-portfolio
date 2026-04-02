@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import PageTransition from '@/components/PageTransition'
 
 export const metadata: Metadata = {
   title: 'Krish Chopra',
@@ -18,7 +19,9 @@ export default function RootLayout({
       <body>
         <Nav />
         <main style={{ paddingTop: 'var(--nav-h)' }}>
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
         </main>
         <Footer />
       </body>
