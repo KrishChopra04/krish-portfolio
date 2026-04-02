@@ -71,7 +71,7 @@ export default function About() {
               {label}
             </span>
             {href ? (
-              <a>
+              <a
                 href={href}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
