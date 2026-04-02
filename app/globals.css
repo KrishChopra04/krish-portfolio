@@ -58,28 +58,16 @@ code, pre, .mono {
 .hero-fade {
   animation: fadeIn 0.6s ease forwards;
 }
+.hero-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
 @media (max-width: 768px) {
-  /* Hero */
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-image {
-    min-height: 300px;
-  }
-
-  /* About and Contact */
   .two-col {
     grid-template-columns: 1fr;
-  }
-
-  /* Nav */
-  .nav-links {
-    gap: 16px;
-  }
-
-  /* General padding */
-  .section-pad {
-    padding: 48px 20px;
   }
 }
