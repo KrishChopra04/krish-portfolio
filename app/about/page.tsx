@@ -14,7 +14,6 @@ export default function About() {
   return (
     <div className="two-col" style={{
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
       minHeight: 'calc(100vh - var(--nav-h))',
     }}>
       <div style={{
