@@ -13,7 +13,6 @@ export default function Home() {
       {/* Hero */}
       <section className="hero-grid" style={{
         display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
         minHeight: 'calc(100vh - var(--nav-h))',
         borderBottom: '1px solid var(--gray-light)',
       }}>
