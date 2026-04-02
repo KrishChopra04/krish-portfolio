@@ -9,10 +9,13 @@ const filters: Filter[] = ['All', 'Essay', 'Short Article', 'Personal']
 
 export default function Writing() {
   const [active, setActive] = useState<Filter>('All')
+  const [newest, setNewest] = useState(true)
 
-  const visible = active === 'All'
+  const filtered = active === 'All'
     ? essays
     : essays.filter(e => e.type === active)
+
+    const sorted = newest ? filtered : [...filtered].reverse()
 
   return (
     <>
@@ -67,7 +70,25 @@ export default function Writing() {
             {f}
           </button>
         ))}
+        <button
+          onClick={() => setNewest(!newest)}
+          style={{
+            fontFamily: 'var(--mono)',
+            fontSize: '11px',
+            letterSpacing: '0.08em',
+            padding: '8px 16px',
+            background: 'none',
+            border: '1px solid var(--gray-light)',
+            cursor: 'pointer',
+            color: 'var(--gray-muted)',
+            marginLeft: 'auto',
+            transition: 'all 0.15s',
+          }}
+        >
+          {newest ? 'Oldest first' : 'Newest First'}
+        </button>
       </div>
+      
       <p style={{
         padding: '16px 40px',
         fontFamily: 'var(--mono)',
@@ -83,7 +104,7 @@ export default function Writing() {
         margin: '0 auto',
         padding: '0 40px 80px',
       }}>
-        {visible.map((essay, i) => (
+        {sorted.map((essay, i) => (
           <a
             key={i}
             href={essay.url}
