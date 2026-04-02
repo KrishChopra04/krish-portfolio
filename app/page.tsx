@@ -318,7 +318,7 @@ export default function Home() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px'}}>
           {[
             { title: 'The Book of Disquiet', author: 'Fernando Pessoa', type: 'Book' },
-            { title: 'Phenomenology of Spirit', author: 'G.W.H. Hegel', tpye: 'Book' },
+            { title: 'Phenomenology of Spirit', author: 'G.W.H. Hegel', type: 'Book' },
           ].map(({ title, author, type}, i) => (
             <div key={i} style={{ 
               display: 'grid',
