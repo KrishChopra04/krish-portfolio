@@ -22,7 +22,6 @@ export default function Footer() {
         {[
           { label: 'Letterboxd', href: 'https://boxd.it/2cCE7' },
           { label: 'Contact', href: '/contact' },
-          { label: 'Disclaimer', href: '/disclaimer' },
           { label: 'Instagram', href: 'https://instagram.com/krishchopra_' },
           { label: 'LinkedIn', href: 'https://linkedin.com/in/krish-chopra-504966271' },
         ].map(({ label, href }) => (
