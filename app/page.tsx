@@ -295,6 +295,56 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Currently Reading */}
+      <section style={{ borderTop: '1px solid var (--gray-light)' }}>
+        <div style={{ padding: '80px 40px', maxWidth: 'var(--max)', margin: '0 auto'}}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'baseline',
+            justifyContent: 'space-between',
+            borderBottom: '1px solid var(--gray-light)',
+            paddingBottom: '16px',
+            marginBottom: '48px',
+          }}>
+            <h2 style={{
+              fontFamily: 'var(--serif)',
+              fontSize: '28px',
+              fontWeight: 400,
+              letterSpacing: '-0.01em',
+            }}>
+              Currently Reading
+            </h2>
+          </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px'}}>
+          {[
+            { title: 'The Book of Disquiet', author: 'Fernando Pessoa', type: 'Book' },
+            { title: 'Phenomenology of Spirit', author: 'G.W.H. Hegel', tpye: 'Book' },
+          ].map(({ title, author, type}, i) => (
+            <div key={i} style={{ 
+              display: 'grid',
+              gridTemplateColumns: '1fr 120px',
+              gap: '24px',
+              alignItems: 'baseline',
+              padding: '16px 0',
+              borderBottom: '1px solid var(--gray-light)',
+            }}>
+              <div>
+                <p style={{ fontSize: '15px', marginBottom: '4px' }}>{title}</p>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'var(--gray-muted)' }}>{author}</p>
+              </div>
+              <span style={{
+                fontFamily: 'var(--mono)',
+                fontSize: '10px',
+                letterSpacing: '0.08em',
+                color: 'var(--gray-muted)',
+                textAlign: 'right',
+                textTransform: 'uppercase',
+              }}>{type}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>  
     </>
   )
 }
