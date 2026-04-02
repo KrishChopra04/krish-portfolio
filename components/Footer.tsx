@@ -24,7 +24,7 @@ export default function Footer() {
           { label: 'Contact', href: '/contact' },
           { label: 'Disclaimer', href: '/disclaimer' },
           { label: 'Instagram', href: 'https://instagram.com/krishchopra_' },
-          { label: 'LinkedIn', href: 'https//linkedin.com/in/krish-chopra-504966271/' },
+          { label: 'LinkedIn', href: 'https//linkedin.com/in/krish-chopra-504966271' },
         ].map(({ label, href }) => (
           <Link
             key={label}
