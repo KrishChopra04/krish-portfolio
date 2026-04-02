@@ -12,7 +12,7 @@ const facts = [
 
 export default function About() {
   return (
-    <div style={{
+    <div className="two-col" style={{
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
       minHeight: 'calc(100vh - var(--nav-h))',
