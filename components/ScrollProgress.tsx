@@ -22,7 +22,7 @@ export default function ScrollProgress() {
             left: 0,
             width: "${progress}%",
             height: '2px',
-            background: 'var(--black)',
+            background: 'red',
             zIndex: 999,
             transition: 'width 0.1s ease',  
         }} />
