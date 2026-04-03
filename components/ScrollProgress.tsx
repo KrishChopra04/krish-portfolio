@@ -18,7 +18,7 @@ export default function ScrollProgress() {
     return (
         <div style={{
             position: 'fixed',
-            top: 'var(--nav-h)',
+            top: 0,
             left: 0,
             width: "${progress}%",
             height: '2px',
