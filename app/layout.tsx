@@ -3,6 +3,7 @@ import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageTransition from '@/components/PageTransition'
+import ScrollProgress from '@/components/ScrollProgress'
 
 export const metadata: Metadata = {
   title: 'Krish Chopra',
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ScrollProgress />
         <Nav />
         <main style={{ paddingTop: 'var(--nav-h)' }}>
           <PageTransition>
