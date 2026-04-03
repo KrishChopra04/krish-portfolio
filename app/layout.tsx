@@ -3,6 +3,7 @@ import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PageTransition from '@/components/PageTransition'
+import ThemeProvider from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Krish Chopra',
@@ -17,13 +18,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Nav />
-        <main style={{ paddingTop: 'var(--nav-h)' }}>
-          <PageTransition>
-            {children}
-          </PageTransition>
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <Nav />
+          <main style={{ paddingTop: 'var(--nav-h)' }}>
+            <PageTransition>
+              {children}
+            </PageTransition>
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
