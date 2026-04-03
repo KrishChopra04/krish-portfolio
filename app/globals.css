@@ -71,3 +71,9 @@ code, pre, .mono {
     grid-template-columns: 1fr;
   }
 }
+[data-theme='dark'] {
+  --black: #f7f5f0;
+  --white: #0a0a0a;
+  --gray-light: #2a2a2a;
+  --gray-muted: #888480;
+}
