@@ -20,7 +20,7 @@ export default function ScrollProgress() {
             position: 'fixed',
             top: 'var(--nav-h)',
             left: 0,
-            width: '${progress}%',
+            width: "${progress}%",
             height: '2px',
             background: 'var(--black)',
             zIndex: 0,
