@@ -1,5 +1,6 @@
 'use client'
 
+import {useTheme } from './ThemeProvider'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -13,6 +14,7 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname()
+  const { dark, toggle } = useTheme()
 
   return (
     <nav style={{
@@ -56,6 +58,7 @@ export default function Nav() {
                   transition: 'color 0.15s, transform 0.15s',
                 display: 'inline-block',
                 }}
+              
               >
                 {label}
               </Link>
@@ -63,6 +66,22 @@ export default function Nav() {
           )
         })}
       </ul>
+<button
+  onClick={toggle}
+  style={{
+    fontFamily: 'var(--mono)',
+    fontSize: '11px',
+    letterSpacing: '0.08em',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    color: 'var(--gray-muted)',
+    padding: '0',
+  }}
+>
+  {dark ? 'Light' : 'Dark'}
+</button>
+        
     </nav>
   )
 }
