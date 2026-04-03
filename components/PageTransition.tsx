@@ -1,34 +1,21 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { usePathname } from 'next/navigation'
 
-export default function ScrollProgress() {
-  const [width, setWidth] = useState(0)
-
-  useEffect(() => {
-    const update = () => {
-      const el = document.documentElement
-      const scrolled = el.scrollTop || document.body.scrollTop
-      const total = el.scrollHeight - el.clientHeight
-      setWidth(total ? (scrolled / total) * 100 : 0)
-    }
-
-    window.addEventListener('scroll', update, { passive: true })
-    update()
-    return () => window.removeEventListener('scroll', update)
-  }, [])
-
-  if (width === 0) return null
+export default function PageTransition({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      height: '3px',
-      width: `${width}%`,
-      background: 'red',
-      zIndex: 9999,
-    }} />
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={pathname}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
   )
 }
