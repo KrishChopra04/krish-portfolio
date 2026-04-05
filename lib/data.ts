@@ -113,7 +113,7 @@ export const essays: Essay[] = [
     date: 'December 2023',
     title: "Film Theory Thesis: Post-Human Relationships in Film",
     type: 'Essay',
-    url: '/essay/theory.pdf',
+    url: '/essays/theory.pdf',
   },
   {
     date: 'December 2023',
