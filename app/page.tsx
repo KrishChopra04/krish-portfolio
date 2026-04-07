@@ -339,6 +339,7 @@ export default function Home() {
               alignItems: 'baseline',
               padding: '16px 0',
               borderBottom: '1px solid var(--gray-light)',
+              borderLeft: '2px solid var(--black)',
             }}>
               <div>
                 <p style={{ fontSize: '15px', marginBottom: '4px' }}>{title}</p>
