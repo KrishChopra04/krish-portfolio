@@ -77,3 +77,13 @@ code, pre, .mono {
   --gray-light: #2a2a2a;
   --gray-muted: #888480;
 }
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .nav-hamburger {
+    display: block !important;
+  }
+}
