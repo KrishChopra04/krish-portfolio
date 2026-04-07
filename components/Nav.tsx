@@ -25,6 +25,7 @@ export default function Nav() {
       height: 'var(--nav-h)',
       background: 'var(--white)',
       borderBottom: '1px solid var(--gray-light)',
+      boxShadow: '0 1 px 12px rgba(0,0,0,0.06)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
