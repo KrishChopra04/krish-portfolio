@@ -5,7 +5,7 @@ const facts = [
   { label: 'Next', value: 'MA, University of Amsterdam \u2014 Film Studies' },
   { label: 'Letterboxd', value: 'boxd.it/2cCE7', href: 'https://boxd.it/2cCE7' },
   { label: 'Contact', value: 'krish.12chopra@gmail.com', href: 'mailto:krish.12chopra@gmail.com' },
-  { label: 'CV', value: 'Download', href: '/cv.pdf' },
+  { label: 'CV', value: 'Download', href: '/krish_chopra_cv.pdf' },
 ]
 
 export default function About() {
