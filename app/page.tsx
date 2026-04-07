@@ -337,7 +337,7 @@ export default function Home() {
               gridTemplateColumns: '1fr 120px',
               gap: '24px',
               alignItems: 'baseline',
-              padding: '16px 0',
+              padding: '16px 0 16px 16px',
               borderBottom: '1px solid var(--gray-light)',
               borderLeft: '2px solid var(--black)',
             }}>
