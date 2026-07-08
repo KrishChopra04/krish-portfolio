@@ -3,12 +3,11 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Film critic and Cinema Studies scholar. BA, NYU Tisch; MA candidate, University of Amsterdam.',
+    'Film critic and Cinema Studies scholar. BA, NYU Tisch; Incoming MA, University of Amsterdam.',
 }
 
 const facts = [
-  { label: 'Currently', value: 'New York, NY' },
-  { label: 'From', value: 'New Delhi, India' },
+  { label: 'Currently', value: 'New Delhi, India' },
   { label: 'Education', value: 'BA, NYU Tisch — Cinema Studies' },
   { label: 'Next', value: 'MA, University of Amsterdam — Film Studies' },
   { label: 'Letterboxd', value: 'boxd.it/2cCE7', href: 'https://boxd.it/2cCE7' },
@@ -30,8 +29,8 @@ export default function About() {
 
       <div className="section" style={{ paddingBlock: 'var(--s-16)' }}>
         <p className="lede">
-          Film critic and Cinema Studies scholar finishing a BA at NYU Tisch,
-          beginning an MA at the University of Amsterdam on a PhD track.
+          Film critic and Cinema Studies scholar. BA at NYU Tisch;
+          incoming MA at the University of Amsterdam on a PhD track.
         </p>
 
         <div style={{ marginTop: 'var(--s-8)' }}>
