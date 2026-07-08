@@ -11,7 +11,7 @@ const details = [
     value: 'krish.12chopra@gmail.com',
     href: 'mailto:krish.12chopra@gmail.com',
   },
-  { label: 'Location', value: 'New York, NY — New Delhi, India' },
+  { label: 'Location', value: 'New Delhi, India' },
   { label: 'Letterboxd', value: 'boxd.it/2cCE7', href: 'https://boxd.it/2cCE7' },
 ]
 
