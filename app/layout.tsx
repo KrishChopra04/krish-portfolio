@@ -46,6 +46,20 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Krish Chopra',
+            url: 'https://www.krishchopra.net',
+            jobTitle: 'Film Critic and Scholar',
+            alumniOf: { '@type': 'CollegeOrUniversity', name: 'New York University' },
+            sameAs: ['https://boxd.it/2cCE7'],
+          }),
+        }}
+      />
       </body>
     </html>
   )
