@@ -164,6 +164,7 @@ export interface Short {
   year: string
   title: string
   url: string
+  youtubeId: string
   description: string
 }
 
@@ -172,18 +173,21 @@ export const shorts: Short[] = [
     year: 'Dec 2025',
     title: 'Surface / Skin \u2014 Textural City Symphony',
     url: 'https://youtu.be/ub78wXHPmF8',
+    youtubeId: 'ub78wXHPmF8',
     description: 'A visual exploration of texture and urban surface.',
   },
   {
     year: 'Jun 2023',
     title: 'The Heartbeat of Manhattan',
     url: 'https://youtu.be/RZE31ll-V6c',
+    youtubeId: 'RZE31ll-V6c',
     description: 'City symphony. New York as rhythm and motion.',
   },
   {
     year: 'Jan 2022',
     title: 'Drudge',
     url: 'https://youtu.be/wOam4DWoLRU',
+    youtubeId: 'wOam4DWoLRU',
     description: 'Short film.',
   },
 ]

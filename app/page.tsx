@@ -1,363 +1,152 @@
-'use client'
-
-
 import Link from 'next/link'
 import Image from 'next/image'
 import { essays, shorts } from '@/lib/data'
+import EssayRow from '@/components/EssayRow'
+
+const reading = [
+  { title: 'The Book of Disquiet', author: 'Fernando Pessoa', type: 'Book' },
+  { title: 'Phenomenology of Spirit', author: 'G.W.H. Hegel', type: 'Book' },
+]
 
 export default function Home() {
   const featured = essays.filter(e => e.featured).slice(0, 6)
+  const latest = essays[0]
 
   return (
     <>
       {/* Hero */}
-      <section className="hero-grid" style={{
-        display: 'grid',
-        minHeight: 'calc(100vh - var(--nav-h))',
-        borderBottom: '1px solid var(--gray-light)',
-      }}>
-        <div style={{
-          padding: '80px 60px 80px 40px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          borderRight: '1px solid var(--gray-light)',
-        }}>
+      <section className="hero">
+        <div className="hero-copy">
           <div>
-            <p style={{
-              fontFamily: 'var(--mono)',
-              fontSize: '11px',
-              letterSpacing: '0.12em',
-              color: 'var(--gray-muted)',
-              textTransform: 'uppercase',
-              marginBottom: '48px',
-            }}>
-              Film Critic &amp; Scholar &nbsp;/&nbsp; New York &nbsp;/&nbsp; New Delhi
+            <p className="label" style={{ marginBottom: 'var(--s-3)' }}>
+              Film Critic &amp; Scholar / New York / New Delhi
             </p>
-            <p style={{
-              fontFamily: 'var(--mono)',
-              fontSize: '10px',
-              letterSpacing: '0.1em',
-              color: 'var(--grey-muted)',
-              marginBottom: '48px',
-              marginTop: '-40px',
-            }}>
-              New: <a href="/essays/dialogism.pdf" target="_blank" style={{ color: 'var(--black', textDecoration: 'underline', textUnderlineOffset: '3px', }}>
-                Sketch Comedy and the Deconstructive Work of Dialogism
+            <p className="meta" style={{ marginBottom: 'var(--s-12)' }}>
+              New:{' '}
+              <a
+                href={latest.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link"
+              >
+                {latest.title}
               </a>
             </p>
 
-            <h1 style={{
-              fontFamily: 'var(--serif)',
-              fontSize: 'clamp(42px, 5vw, 72px)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.02em',
-              fontWeight: 400,
-              maxWidth: '520px',
-            }}>
+            <h1 className="display" style={{ maxWidth: '11em' }}>
               There is no casual relationship with{' '}
-              <em style={{ fontStyle: 'italic', color: 'var(--gray-muted)' }}> cinema.</em>
+              <em className="muted">cinema.</em>
             </h1>
 
-            <p style={{
-              fontSize: '14px',
-              lineHeight: 1.7,
-              color: '#555',
-              maxWidth: '400px',
-              marginTop: '40px',
-            }}>
+            <p
+              className="meta"
+              style={{ maxWidth: '26rem', marginTop: 'var(--s-8)' }}
+            >
               Essays, criticism, and video work on film theory, spectatorship,
               and the politics of form. NYU Tisch Cinema Studies. MA candidate,
               University of Amsterdam.
             </p>
 
-            <Link href="/writing" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '10px',
-              marginTop: '48px',
-              fontFamily: 'var(--mono)',
-              fontSize: '12px',
-              letterSpacing: '0.08em',
-              borderBottom: '1px solid var(--black)',
-              paddingBottom: '2px',
-              color: 'var(--black)',
-            }}>
+            <Link
+              href="/writing"
+              className="arrow-link"
+              style={{ marginTop: 'var(--s-12)' }}
+            >
               Read the writing &rarr;
             </Link>
           </div>
 
-          <div style={{
-            fontFamily: 'var(--mono)',
-            fontSize: '10px',
-            color: 'var(--gray-muted)',
-            letterSpacing: '0.08em',
-          }}>
+          <p className="meta" style={{ fontSize: 'var(--text-label)', letterSpacing: '0.06em' }}>
             <a
               href="https://boxd.it/2cCE7"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                color: 'var(--gray-muted)',
-                textDecoration: 'underline',
-                textUnderlineOffset: '3px',
-              }}
+              className="link"
             >
               Letterboxd
-            </a>
-            {' '}&mdash;{' '}Log updated regularly
-          </div>
+            </a>{' '}
+            &mdash; Log updated regularly
+          </p>
         </div>
 
-        <div style={{
-          position: 'relative',
-          overflow: 'hidden',
-          background: '#d4cfc6',
-          minHeight: '500px',
-        }}>
+        <div className="hero-image">
           <Image
-            src= "/hero.jpeg"
+            src="/hero.jpeg"
             alt="Krish Chopra"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'grayscale(20%)' }}
+            style={{ objectFit: 'cover', objectPosition: 'center top' }}
             priority
           />
-          <span style={{
-            position: 'absolute',
-            bottom: '24px',
-            right: '24px',
-            fontFamily: 'var(--mono)',
-            fontSize: '10px',
-            letterSpacing: '0.1em',
-            color: 'rgba(247,245,240,0.7)',
-          }}>
-            NYC, 2025
-          </span>
+          <span className="hero-caption">NYC, 2025</span>
         </div>
       </section>
 
-      {/* Featured essays */}
-      <section style={{ padding: '120px 40px', maxWidth: 'var(--max)', margin: '0 auto' }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'baseline',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid var(--gray-light)',
-          paddingBottom: '16px',
-          marginBottom: '48px',
-        }}>
-          <h2 style={{
-            fontFamily: 'var(--serif)',
-            fontSize: '28px',
-            fontWeight: 400,
-            letterSpacing: '-0.01em',
-          }}>
-            Recent Essays
-          </h2>
-          <Link href="/writing" style={{
-            fontFamily: 'var(--mono)',
-            fontSize: '11px',
-            letterSpacing: '0.08em',
-            color: 'var(--gray-muted)',
-          }}>
-            All writing &rarr;
-          </Link>
-        </div>
+      {/* Recent essays */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Recent Essays</h2>
+            <Link href="/writing" className="quiet-link">
+              All writing &rarr;
+            </Link>
+          </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {featured.map((essay, i) => (
-            <a
-              key={i}
-              href={essay.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.015)')}
-              onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '80px 1fr 120px',
-                gap: '24px',
-                alignItems: 'baseline',
-                padding: '20px 0',
-                borderBottom: i < featured.length - 1 ? '1px solid var(--gray-light)' : 'none',
-                color: 'var(--black)',
-                textDecoration: 'none',
-              }}
-            >
-              <span style={{
-                fontFamily: 'var(--mono)',
-                fontSize: '11px',
-                color: 'var(--gray-muted)',
-                letterSpacing: '0.05em',
-              }}>
-                {essay.date}
-              </span>
-              <span style={{ fontSize: '15px', lineHeight: 1.4 }}>
-                {essay.title}
-              </span>
-              <span style={{
-                fontFamily: 'var(--mono)',
-                fontSize: '10px',
-                letterSpacing: '0.08em',
-                color: 'var(--gray-muted)',
-                textAlign: 'right',
-                textTransform: 'uppercase',
-              }}>
-                {essay.type}
-              </span>
-            </a>
-          ))}
+          <div className="work-list">
+            {featured.map(essay => (
+              <EssayRow key={essay.url} essay={essay} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Shorts */}
-      <section style={{ borderTop: '1px solid var(--gray-light)' }}>
-        <div style={{ padding: '80px 40px', maxWidth: 'var(--max)', margin: '0 auto' }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'baseline',
-            justifyContent: 'space-between',
-            borderBottom: '1px solid var(--gray-light)',
-            paddingBottom: '16px',
-            marginBottom: '48px',
-          }}>
-            <h2 style={{
-              fontFamily: 'var(--serif)',
-              fontSize: '28px',
-              fontWeight: 400,
-              letterSpacing: '-0.01em',
-            }}>
-              Shorts &amp; Video Essays
-            </h2>
-            <Link href="/shorts" style={{
-              fontFamily: 'var(--mono)',
-              fontSize: '11px',
-              letterSpacing: '0.08em',
-              color: 'var(--gray-muted)',
-            }}>
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Shorts &amp; Video Essays</h2>
+            <Link href="/shorts" className="quiet-link">
               All films &rarr;
             </Link>
           </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1px',
-            background: 'var(--gray-light)',
-            border: '1px solid var(--gray-light)',
-          }}>
-            {shorts.map((short, i) => (
+          <div className="film-grid">
+            {shorts.map(short => (
               <a
-                key={i}
+                key={short.youtubeId}
                 href={short.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  background: 'var(--white)',
-                  padding: '32px 28px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '16px',
-                  color: 'var(--black)',
-                  textDecoration: 'none',
-                }}
+                className="film-card"
               >
-                <span style={{
-                  fontFamily: 'var(--mono)',
-                  fontSize: '10px',
-                  color: 'var(--gray-muted)',
-                  letterSpacing: '0.1em',
-                }}>
-                  {short.year}
-                </span>
-                <h3 style={{
-                  fontFamily: 'var(--serif)',
-                  fontSize: '18px',
-                  fontWeight: 400,
-                  lineHeight: 1.2,
-                }}>
-                  {short.title}
-                </h3>
-                <div style={{
-                  marginTop: 'auto',
-                  fontFamily: 'var(--mono)',
-                  fontSize: '10px',
-                  letterSpacing: '0.1em',
-                  color: 'var(--gray-muted)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                }}>
-                  <span style={{
-                    width: '20px',
-                    height: '20px',
-                    border: '1px solid var(--gray-light)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '8px',
-                  }}>
-                    &#9654;
-                  </span>
-                  Watch
-                </div>
+                <img
+                  src={`https://i.ytimg.com/vi/${short.youtubeId}/hqdefault.jpg`}
+                  alt={`Still from ${short.title}`}
+                  loading="lazy"
+                />
+                <span className="meta">{short.year}</span>
+                <h3>{short.title}</h3>
               </a>
             ))}
           </div>
         </div>
       </section>
-      {/* Currently Reading */}
-      <section style={{ borderTop: '1px solid var (--gray-light)' }}>
-        <div style={{ padding: '80px 40px', maxWidth: 'var(--max)', margin: '0 auto'}}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'baseline',
-            justifyContent: 'space-between',
-            borderBottom: '1px solid var(--gray-light)',
-            paddingBottom: '16px',
-            marginBottom: '48px',
-          }}>
-            <h2 style={{
-              fontFamily: 'var(--serif)',
-              fontSize: '28px',
-              fontWeight: 400,
-              letterSpacing: '-0.01em',
-            }}>
-              Currently Reading
-            </h2>
+
+      {/* Currently reading */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Currently Reading</h2>
           </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px'}}>
-          {[
-            { title: 'The Book of Disquiet', author: 'Fernando Pessoa', type: 'Book' },
-            { title: 'Phenomenology of Spirit', author: 'G.W.H. Hegel', type: 'Book' },
-          ].map(({ title, author, type}, i) => (
-            <div key={i} style={{ 
-              display: 'grid',
-              gridTemplateColumns: '1fr 120px',
-              gap: '24px',
-              alignItems: 'baseline',
-              padding: '16px 0 16px 16px',
-              borderBottom: '1px solid var(--gray-light)',
-              borderLeft: '2px solid var(--black)',
-            }}>
-              <div>
-                <p style={{ fontSize: '15px', marginBottom: '4px' }}>{title}</p>
-                <p style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'var(--gray-muted)' }}>{author}</p>
-              </div>
-              <span style={{
-                fontFamily: 'var(--mono)',
-                fontSize: '10px',
-                letterSpacing: '0.08em',
-                color: 'var(--gray-muted)',
-                textAlign: 'right',
-                textTransform: 'uppercase',
-              }}>{type}</span>
+
+          {reading.map(({ title, author, type }) => (
+            <div key={title} className="work-row">
+              <span className="meta">{author}</span>
+              <span className="work-row-title">{title}</span>
+              <span className="label">{type}</span>
             </div>
           ))}
         </div>
-      </div>
-    </section>  
+      </section>
     </>
   )
 }

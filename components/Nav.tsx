@@ -6,11 +6,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const links = [
-  { href: '/', label: 'home' },
-  { href: '/writing', label: 'writing' },
-  { href: '/shorts', label: 'shorts' },
-  { href: '/about', label: 'about' },
-  { href: '/contact', label: 'contact' },
+  { href: '/', label: 'Home' },
+  { href: '/writing', label: 'Writing' },
+  { href: '/shorts', label: 'Shorts' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Nav() {
@@ -20,131 +20,60 @@ export default function Nav() {
 
   return (
     <>
-      <nav style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: 'var(--nav-h)',
-        background: 'var(--white)',
-        borderBottom: '1px solid var(--gray-light)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '0 40px',
-        zIndex: 100,
-      }}>
-        <Link href="/" style={{
-          fontFamily: 'var(--serif)',
-          fontSize: '18px',
-          letterSpacing: '-0.01em',
-          color: 'var(--black)',
-        }}>
-          Krish Chopra
-        </Link>
+      <nav className="nav" aria-label="Main">
+        <div className="container nav-inner">
+          <Link href="/" className="nav-brand">
+            Krish Chopra
+          </Link>
 
-        {/* Desktop links */}
-        <ul style={{
-          display: 'flex',
-          gap: '36px',
-          listStyle: 'none',
-        }} className="nav-desktop">
-          {links.map(({ href, label }) => {
-            const active = pathname === href
-            return (
+          <ul className="nav-links">
+            {links.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
-                  onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
-                  style={{
-                    fontFamily: 'var(--mono)',
-                    fontSize: '12px',
-                    fontWeight: 500,
-                    letterSpacing: '0.08em',
-                    color: active ? 'var(--black)' : 'var(--gray-muted)',
-                    transition: 'color 0.15s, transform 0.15s',
-                    display: 'inline-block',
-                  }}
+                  className="nav-link"
+                  aria-current={pathname === href ? 'page' : undefined}
                 >
                   {label}
                 </Link>
               </li>
-            )
-          })}
-        </ul>
+            ))}
+          </ul>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <button
-            onClick={toggle}
-            style={{
-              fontFamily: 'var(--mono)',
-              fontSize: '11px',
-              letterSpacing: '0.08em',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--gray-muted)',
-              padding: '0',
-            }}
-          >
-            {dark ? 'Light' : 'Dark'}
-          </button>
+          <div className="nav-actions">
+            <button
+              onClick={toggle}
+              className="nav-toggle"
+              aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
+            >
+              {dark ? 'Light' : 'Dark'}
+            </button>
 
-          {/* Hamburger button -- mobile only */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="nav-hamburger"
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--black)',
-              fontFamily: 'var(--mono)',
-              fontSize: '11px',
-              letterSpacing: '0.08em',
-              padding: '0',
-              display: 'none',
-            }}
-          >
-            {open ? 'Close' : 'Menu'}
-          </button>
+            <button
+              onClick={() => setOpen(!open)}
+              className="nav-hamburger"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+            >
+              {open ? 'Close' : 'Menu'}
+            </button>
+          </div>
         </div>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="nav-mobile-menu" style={{
-          position: 'fixed',
-          top: 'var(--nav-h)',
-          left: 0,
-          right: 0,
-          background: 'var(--white)',
-          borderBottom: '1px solid var(--gray-light)',
-          zIndex: 99,
-          padding: '24px 40px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '20px',
-        }}>
-          {links.map(({ href, label }) => {
-            const active = pathname === href
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setOpen(false)}
-                style={{
-                  fontFamily: 'var(--mono)',
-                  fontSize: '14px',
-                  letterSpacing: '0.08em',
-                  color: active ? 'var(--black)' : 'var(--gray-muted)',
-                }}
-              >
-                {label}
-              </Link>
-            )
-          })}
+        <div id="mobile-menu" className="nav-mobile">
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setOpen(false)}
+              className="nav-link"
+              aria-current={pathname === href ? 'page' : undefined}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       )}
     </>
