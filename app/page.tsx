@@ -19,7 +19,7 @@ export default function Home() {
         <div className="hero-copy">
           <div>
             <p className="label" style={{ marginBottom: 'var(--s-3)' }}>
-              Film Critic &amp; Scholar / New York / New Delhi
+              Film Critic &amp; Scholar / New York / New Delhi / Amsterdam
             </p>
             <p className="meta" style={{ marginBottom: 'var(--s-12)' }}>
               New:{' '}
@@ -43,7 +43,7 @@ export default function Home() {
               style={{ maxWidth: '26rem', marginTop: 'var(--s-8)' }}
             >
               Essays, criticism, and video work on film theory, spectatorship,
-              and the politics of form. NYU Tisch Cinema Studies. MA candidate,
+              and the politics of form. BA, NYU Tisch Cinema Studies. Incoming MA,
               University of Amsterdam.
             </p>
 
