@@ -9,7 +9,7 @@ const reading = [
 ]
 
 export default function Home() {
-  const featured = essays.filter(e => e.featured).slice(0, 6)
+  const featured = essays.filter(e => e.featured).slice(0, 3)
   const latest = essays[0]
 
   return (
