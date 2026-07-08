@@ -4,7 +4,7 @@ import { essays, shorts } from '@/lib/data'
 import EssayRow from '@/components/EssayRow'
 
 const reading = [
-  { title: 'The Book of Disquiet', author: 'Fernando Pessoa', type: 'Book' },
+  { title: 'Carnal Thoughts', author: 'Vivian Sobchack', type: 'Book' },
   { title: 'Phenomenology of Spirit', author: 'G.W.H. Hegel', type: 'Book' },
 ]
 
