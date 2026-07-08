@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <span>
-          &copy; 2025 Krish Chopra. Content shared for educational and portfolio
+          &copy; 2026 Krish Chopra. Content shared for educational and portfolio
           purposes only.
         </span>
 
