@@ -30,7 +30,7 @@ export const essays: Essay[] = [
     date: 'May 2026',
     title: 'Queer Time and Space: Heteronormativity Refused in Bound and The Doom Generation',
     type: 'Short Article',
-    url: 'essays/bound.pdf',
+    url: '/essays/bound.pdf',
     featured: true,
   },
   
