@@ -9,6 +9,31 @@ export interface Essay {
 }
 
 export const essays: Essay[] = [
+  
+  {
+    date: 'May 2026',
+    title: 'Making the Unknowable, Knowable: The Femme Fatale’s Collapse in The Grifters and Jackie Brown',
+    type: 'Short Article',
+    url: '/essays/grifters.pdf',
+    featured: true,
+  },
+
+  {
+    date: 'May 2026',
+    title: 'Modalities of Noir Blackness: Whiteness, Form, and the Racial Floor of the Genre in Deep Cover, Clockers, and Devil in a Blue Dress',
+    type: 'Short Article',
+    url: '/essays/devil.pdf',
+    featured: true,
+  },
+
+  {
+    date: 'May 2026',
+    title: 'Queer Time and Space: Heteronormativity Refused in Bound and The Doom Generation',
+    type: 'Short Article',
+    url: 'essays/bound.pdf',
+    featured: true,
+  },
+  
   {
     date: 'Dec 2025',
     title: 'Sketch Comedy and the Deconstructive Work of Dialogism',
@@ -35,7 +60,6 @@ export const essays: Essay[] = [
     title: "Adaptation & Transnational Remediation: Remix in \u2018Bride & Prejudice\u2019",
     type: 'Essay',
     url: '/essays/bride.pdf',
-    featured: true,
   },
   {
     date: 'Oct 2025',
