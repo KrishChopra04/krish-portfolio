@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import WritingList from '@/components/WritingList'
 
 export const metadata: Metadata = {
@@ -16,6 +17,12 @@ export default function Writing() {
       </header>
 
       <WritingList />
+
+      <Link href="screenplay" className="work-row">
+        <span className="meta">Unpublished</span>
+        <span className="work-row-title">Screenplay (request access)</span>
+        <span className="label">Locked</span>
+      </Link>
     </div>
   )
 }
