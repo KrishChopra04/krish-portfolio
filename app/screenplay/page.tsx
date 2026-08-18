@@ -24,7 +24,7 @@ export default function Screenplay () {
         >
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--s-8)' }}>
                 <p>
-                    This one isn&apos;t public. Any interested parties that may wish to read it, please request access to the Google Drive file and send your name, email, and a line on why, and I&apos;ll follow up with access.
+                    Any interested parties that may wish to read my debut feature length screenplay, please request access to the Google Drive file and send your name, email, and a line on why, and I&apos;ll follow up with access.
                 </p>
             </div>
 
