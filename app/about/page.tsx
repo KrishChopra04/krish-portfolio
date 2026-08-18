@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const facts = [
   { label: 'From', value: 'New Delhi, India' },
-  { label: 'Currently Pursuing', value: 'MA, University of Amsterdam – Film Studies, NL' },
+  { label: 'Currently Pursuing', value: 'MA, University of Amsterdam – Film Studies' },
   { label: 'Education', value: 'BA, NYU Tisch — Cinema Studies' },
   { label: 'Letterboxd', value: 'boxd.it/2cCE7', href: 'https://boxd.it/2cCE7' },
   {
