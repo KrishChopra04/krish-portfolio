@@ -16,7 +16,7 @@ const facts = [
     value: 'krish.12chopra@gmail.com',
     href: 'mailto:krish.12chopra@gmail.com',
   },
-  { label: 'CV', value: 'Download', href: '/krish_chopra_cv.pdf' },
+  { label: 'CV', value: 'Download', href: '/CV_Chopra.pdf' },
 ]
 
 export default function About() {
