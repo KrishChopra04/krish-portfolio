@@ -9,6 +9,14 @@ export interface Essay {
 }
 
 export const essays: Essay[] = [
+
+  {
+    date: 'October 2026',
+    title: 'Cinema as Afterward: Images after Initial Consumption',
+    type: 'Short Article',
+    url: '/essays/today.pdf',
+    featured: true,
+  },
   
   {
     date: 'May 2026',
@@ -53,7 +61,6 @@ export const essays: Essay[] = [
     title: "Beyond the Solo: Apparatus, Ethics, and Undoing Individualist Mythology in \u2018Free Solo\u2019",
     type: 'Essay',
     url: '/essays/free_solo.pdf',
-    featured: true,
   },
   {
     date: 'Nov 2025',
