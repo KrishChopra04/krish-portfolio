@@ -12,7 +12,7 @@ export const essays: Essay[] = [
 
   {
     date: 'October 2026',
-    title: 'Cinema as Afterward: Images after Initial Consumption',
+    title: 'Cinema as Afterward: Images After Initial Consumption',
     type: 'Short Article',
     url: '/essays/today.pdf',
     featured: true,
