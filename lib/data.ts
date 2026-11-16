@@ -10,6 +10,13 @@ export interface Essay {
 
 export const essays: Essay[] = [
 
+  { date: 'October 2026',
+    title: 'The Long Count: Projection, Duration, and Evidence in The Corbett-Fitzsimmons Fight',
+    type: 'Essay',
+    url: '/essays/parallax.pdf',
+    featured: true,
+  },
+
   {
     date: 'October 2026',
     title: 'Cinema as Afterward: Images After Initial Consumption',
@@ -31,7 +38,6 @@ export const essays: Essay[] = [
     title: 'Modalities of Noir Blackness: Whiteness, Form, and the Racial Floor of the Genre in Deep Cover, Clockers, and Devil in a Blue Dress',
     type: 'Short Article',
     url: '/essays/devil.pdf',
-    featured: true,
   },
 
   {
